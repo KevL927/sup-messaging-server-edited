@@ -2,7 +2,7 @@
 // exactly as it would appear in the Origin header
 // e.g. 'https://www.myurl.com'
 
-const whitelist = ['https://matcodesalot.github.io/sup-front/'];
+const whitelist = ['https://matcodesalot.github.io/sup-front/', 'https://sup-messaging-frontend-v2-kl012.c9users.io'];
 
 module.exports = (req, res, next) => {
     let allowCORS = false;
