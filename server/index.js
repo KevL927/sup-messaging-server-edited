@@ -11,6 +11,7 @@ const messagesRouter = require('./routes/messages');
 const usersRouter = require('./routes/users');
 
 const app = express();
+app.options('/api/v1/*', function(req, res) { res.sendStatus(200)} );
 app.use('/api/v1/*', setCORS);
 app.post('*', jsonParser);
 app.put('*', jsonParser);
