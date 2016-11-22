@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     let allowCORS = false;
     
     if (process.env.NODE_ENV !== 'production') allowCORS = false;
-    if (process.env.NODE_ENV === 'production' && whitelist.indexOf(req.headers.origin) !== -1) allowCORS = true;
+    if (process.env.NODE_ENV === 'production' && whitelist.indexOf(req.headers.origin) !== -1) allowCORS = false;
     
     if (!allowCORS) return next();
     
