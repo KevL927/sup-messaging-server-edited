@@ -33,9 +33,7 @@ const runServer = function (callback) {
   });
 };
 
-if (require.main === module) {
-  runServer();
-}
+runServer();
 
 exports.app = app;
 exports.runServer = runServer;
