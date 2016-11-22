@@ -2,13 +2,13 @@
 // exactly as it would appear in the Origin header
 // e.g. 'https://www.myurl.com'
 
-const whitelist = ['https://sup-messaging-frontend-v2-kl012.c9users.io/'];
+const whitelist = ['https://sup-messaging-frontend-v2-kl012.c9users.io'];
 
 module.exports = (req, res, next) => {
     let allowCORS = false;
     
-    if (process.env.NODE_ENV !== 'production') allowCORS = false;
-    if (process.env.NODE_ENV === 'production' && whitelist.indexOf(req.headers.origin) !== -1) allowCORS = false;
+    if (process.env.NODE_ENV !== 'production') allowCORS = true;
+    if (process.env.NODE_ENV === 'production' && whitelist.indexOf(req.headers.origin) !== -1) allowCORS = true;
     
     if (!allowCORS) return next();
     
